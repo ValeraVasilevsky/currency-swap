@@ -1,0 +1,23 @@
+.container {
+  @apply relative w-full hover:border-accent h-11 px-3 py-2 border-[1px] border-solid border-white rounded-lg max-w-[280px] transition-all;
+
+  &:has(.input:focus, .input:active, .placeholder.focused) {
+    @apply pt-3.5;
+  }
+
+  &:has(.input:focus, .input:active) {
+    @apply border-accent;
+  }
+
+  & .placeholder {
+    @apply absolute top-2.5 left-3 text-secondary pointer-events-none text-sm transition-all;
+
+    &.focused {
+      @apply text-placeholder-sm top-1;
+    }
+  }
+
+  & .input {
+    @apply w-full h-full text-white text-xs outline-none border-none bg-transparent;
+  }
+}

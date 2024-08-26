@@ -3,9 +3,15 @@ export default {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        primary: "#1a1a1a",
+        secondary: "#a1a1aa",
+        accent: "#799E99",
+      },
 
-      fontSize: {},
+      fontSize: {
+        "placeholder-sm": ["10px", "12px"],
+      },
 
       boxShadow: {},
     },

@@ -11,6 +11,13 @@ export const router = createRouter({
     {
       path: "/",
       component: (): Component => import("pages/layout.vue"),
+      children: [
+        {
+          path: "",
+          name: "main",
+          component: (): Component => import("pages/main/index.vue"),
+        },
+      ],
     },
     {
       path: "/",
